@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meta_datas",
+  "info": {
+    "singularName": "meta-data",
+    "pluralName": "meta-datas",
+    "displayName": "MetaData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

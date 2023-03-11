@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autosuggests",
+  "info": {
+    "singularName": "autosuggest",
+    "pluralName": "autosuggests",
+    "displayName": "Autosuggest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "suggestion": {
+      "type": "string"
+    }
+  }
+}

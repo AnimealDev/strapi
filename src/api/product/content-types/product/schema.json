@@ -1,0 +1,116 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "mrp": {
+      "type": "decimal",
+      "min": 0
+    },
+    "selling_price": {
+      "type": "decimal",
+      "min": 0
+    },
+    "cost_price": {
+      "type": "decimal"
+    },
+    "min_quantity": {
+      "type": "integer"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "long_description": {
+      "type": "text"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "products"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subcategory.subcategory",
+      "inversedBy": "products"
+    },
+    "animal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::animal.animal",
+      "inversedBy": "products"
+    },
+    "breed": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::breed.breed",
+      "inversedBy": "products"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "meta_title": {
+      "type": "text"
+    },
+    "meta_keywords": {
+      "type": "text"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "display_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::variant.variant",
+      "mappedBy": "product"
+    }
+  }
+}
