@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "customer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::customer.customer",
-      "inversedBy": "wishlist"
-    },
     "products": {
       "type": "relation",
       "relation": "oneToMany",

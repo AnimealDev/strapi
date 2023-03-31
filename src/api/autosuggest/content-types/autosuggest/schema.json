@@ -4,7 +4,8 @@
   "info": {
     "singularName": "autosuggest",
     "pluralName": "autosuggests",
-    "displayName": "Autosuggest"
+    "displayName": "Autosuggest",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * customer router
+ * pincode router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::customer.customer');
+module.exports = createCoreRouter('api::pincode.pincode');

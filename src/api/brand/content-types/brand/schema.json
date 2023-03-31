@@ -46,6 +46,12 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "brand"
+    },
+    "animals": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::animal.animal",
+      "inversedBy": "brands"
     }
   }
 }
