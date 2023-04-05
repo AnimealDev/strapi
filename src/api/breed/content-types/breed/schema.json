@@ -4,7 +4,8 @@
   "info": {
     "singularName": "breed",
     "pluralName": "breeds",
-    "displayName": "Breed"
+    "displayName": "Breed",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,30 +26,41 @@
       "inversedBy": "breeds"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_keywords": {
+      "type": "text"
+    },
+    "meta_description": {
+      "type": "text"
     },
     "products": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "breed"
+      "mappedBy": "breeds"
     }
   }
 }

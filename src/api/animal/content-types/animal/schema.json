@@ -4,7 +4,8 @@
   "info": {
     "singularName": "animal",
     "pluralName": "animals",
-    "displayName": "Animal"
+    "displayName": "Animal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,24 +20,26 @@
       "targetField": "name"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "breeds": {
       "type": "relation",
@@ -44,16 +47,25 @@
       "target": "api::breed.breed",
       "mappedBy": "animal"
     },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product",
-      "mappedBy": "animal"
-    },
     "brands": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::brand.brand",
+      "mappedBy": "animals"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_keywords": {
+      "type": "text"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
       "mappedBy": "animals"
     }
   }

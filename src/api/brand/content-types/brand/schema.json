@@ -52,6 +52,15 @@
       "relation": "manyToMany",
       "target": "api::animal.animal",
       "inversedBy": "brands"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_keywords": {
+      "type": "text"
+    },
+    "meta_description": {
+      "type": "text"
     }
   }
 }

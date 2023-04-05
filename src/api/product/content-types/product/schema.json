@@ -51,27 +51,27 @@
       "target": "api::brand.brand",
       "inversedBy": "products"
     },
-    "category": {
+    "categories": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "subcategory": {
+    "subcategories": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::subcategory.subcategory",
       "inversedBy": "products"
     },
-    "animal": {
+    "animals": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::animal.animal",
       "inversedBy": "products"
     },
-    "breed": {
+    "breeds": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::breed.breed",
       "inversedBy": "products"
     },
